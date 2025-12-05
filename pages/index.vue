@@ -1,60 +1,46 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="min-h-screen bg-gray-50 text-gray-900">
-    <!-- Responsive nav -->
-    <header class="bg-white shadow">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex">
-            <div class="flex-shrink-0 flex items-center">
-              <NuxtLink to="/" class="text-xl font-semibold text-indigo-600">Nuxt-app</NuxtLink>
+  <div class="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 text-gray-900">
+    <NavBar />
+
+    <main class="max-w-6xl mx-auto p-6 lg:p-12">
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">Build fast with Nuxt & Tailwind</h1>
+          <p class="text-lg text-gray-600 mb-6">A minimal starter wired with TypeScript, Pinia, Vitest, ESLint, Prettier and Tailwind CSS. Beautiful defaults and modern tooling so you can focus on features.</p>
+          <div class="flex gap-3">
+            <NuxtLink to="#" class="inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Get started</NuxtLink>
+            <NuxtLink to="/about" class="inline-flex items-center px-5 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50">Learn more</NuxtLink>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h3 class="text-lg font-semibold mb-3">Interactive demo</h3>
+          <p class="text-sm text-gray-500 mb-4">Try the simple counter below — this uses Pinia for state management.</p>
+          <div class="flex items-center gap-4">
+            <div class="text-3xl font-bold">{{ counter.count }}</div>
+            <div class="flex gap-2">
+              <button @click="counter.increment" class="px-3 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">+</button>
+              <button @click="counter.reset" class="px-3 py-2 border rounded-md hover:bg-gray-50">Reset</button>
             </div>
-            <nav class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-              <NuxtLink to="/" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Home</NuxtLink>
-              <NuxtLink to="/about" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">About</NuxtLink>
-              <NuxtLink to="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Docs</NuxtLink>
-            </nav>
-          </div>
-          <div class="hidden sm:ml-6 sm:flex sm:items-center">
-            <NuxtLink to="#" class="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded hover:bg-indigo-700">Get started</NuxtLink>
-          </div>
-          <!-- Mobile menu button -->
-          <div class="-mr-2 flex items-center sm:hidden">
-            <button @click="menuOpen = !menuOpen" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg v-if="!menuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg v-else class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Mobile menu, show/hide based on menuOpen state. -->
-      <div v-if="menuOpen" class="sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-          <NuxtLink to="/" class="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 bg-indigo-50 text-indigo-700 text-base font-medium">Home</NuxtLink>
-          <NuxtLink to="/about" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">About</NuxtLink>
-          <NuxtLink to="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">Docs</NuxtLink>
-          <NuxtLink to="#" class="block w-full text-center mt-2 px-4 py-2 bg-indigo-600 text-white rounded">Get started</NuxtLink>
+      <section class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="font-semibold mb-2">Fast DX</h4>
+          <p class="text-sm text-gray-600">Vite + Nuxt hot-module replacement and TypeScript support out of the box.</p>
         </div>
-      </div>
-    </header>
-
-    <main class="max-w-4xl mx-auto p-6">
-      <h1 class="text-3xl font-extrabold mb-4">Welcome to Nuxt-app</h1>
-      <p class="text-gray-600 mb-4">This is a minimal Nuxt 3 starter.</p>
-
-      <div class="bg-white shadow rounded p-4">
-        <p class="mb-2">Count: <span class="font-medium">{{ counter.count }}</span></p>
-        <div class="flex gap-2">
-          <button @click="counter.increment" class="px-3 py-1 bg-indigo-600 text-white rounded hover:bg-indigo-700">Increment</button>
-          <button @click="counter.reset" class="px-3 py-1 border rounded hover:bg-gray-50">Reset</button>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="font-semibold mb-2">Testable</h4>
+          <p class="text-sm text-gray-600">Vitest and @vue/test-utils included so you can write component tests easily.</p>
         </div>
-      </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="font-semibold mb-2">Flexible state</h4>
+          <p class="text-sm text-gray-600">Pinia integrated via @pinia/nuxt for composable, type-safe stores.</p>
+        </div>
+      </section>
     </main>
   </div>
 </template>
