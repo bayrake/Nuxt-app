@@ -1,0 +1,26 @@
+
+> nuxt-app@0.0.1 dev
+> nuxi dev
+
+│
+●  Nuxt 4.2.1 (with Nitro 2.12.9, Vite 7.2.6 and Vue 3.5.25)
+
+  ➜ Local:    http://localhost:3000/
+  ➜ Network:  use --host to expose
+
+  ➜ DevTools: press Shift + Option + D in the browser (v3.1.1)
+
+ℹ Re-optimizing dependencies because lockfile has changed
+✔ Vite client built in 23ms
+✔ Vite server built in 26ms
+[nitro] ✔ Nuxt Nitro server built in 388ms
+ℹ Vite server warmed up in 1ms
+ℹ Vite client warmed up in 2ms
+ℹ ✨ new dependencies optimized: @vue/devtools-core, @vue/devtools-kit
+ℹ hmr update /pages/index.vue, /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
+✔ Vite server hmr 15 files in 0.976ms
+WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
+WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
+WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
+WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
+✔ Vite server hmr 3 files in 0.011ms
