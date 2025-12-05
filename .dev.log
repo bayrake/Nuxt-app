@@ -24,3 +24,29 @@ WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
 WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
 WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
 ✔ Vite server hmr 3 files in 0.011ms
+ℹ nuxt.config.ts updated. Restarting Nuxt...
+  ➜ DevTools: press Shift + Option + D in the browser (v3.1.1)
+
+ℹ Re-optimizing dependencies because lockfile has changed
+✔ Vite client built in 18ms
+✔ Vite server built in 12ms
+[nitro] ✔ Nuxt Nitro server built in 340ms
+ℹ Vite server warmed up in 1ms
+ℹ Vite client warmed up in 1ms
+ℹ ✨ new dependencies optimized: @vue/devtools-core, @vue/devtools-kit
+[nuxt] ℹ Directory /Users/ercumentbayrak/project/nuxt/Nuxt-app/stores/ created
+ℹ Restarting Nuxt...
+  ➜ DevTools: press Shift + Option + D in the browser (v3.1.1)
+
+✔ Vite client built in 9ms
+✔ Vite server built in 8ms
+[nitro] ✔ Nuxt Nitro server built in 282ms
+ℹ Vite server warmed up in 0ms
+ℹ Vite client warmed up in 1ms
+✔ Vite server hmr 1 files in 1.153ms
+ℹ hmr update /pages/index.vue, /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
+ℹ hmr update /stores/counter.ts
+ℹ hmr update /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
+ℹ hmr update /pages/index.vue, /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
+ℹ hmr update /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
+ℹ hmr update /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs (x2)

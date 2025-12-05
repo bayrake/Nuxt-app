@@ -1,10 +1,11 @@
-import { mount } from '@vue/test-utils'
-import Index from '../../pages/index.vue'
-import { describe, it, expect } from 'vitest'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { mount } from '@vue/test-utils';
+import Index from '../../pages/index.vue';
+import { describe, it, expect } from 'vitest';
 
 describe('Index page', () => {
   it('renders welcome text', () => {
-    const wrapper = mount(Index as any)
-    expect(wrapper.text()).toContain('Welcome to Nuxt-app')
-  })
-})
+    const wrapper = mount(Index as any);
+    expect(wrapper.text()).toContain('Welcome to Nuxt-app');
+  });
+});

@@ -5,4 +5,6 @@ export default defineNuxtConfig({
   nitro: {
     compatibilityDate: '2025-12-05',
   },
+  // Enable Pinia module for Nuxt
+  modules: ['@pinia/nuxt'],
 });
