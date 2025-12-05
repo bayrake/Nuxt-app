@@ -7,4 +7,6 @@ export default defineNuxtConfig({
   },
   // Enable Pinia module for Nuxt
   modules: ['@pinia/nuxt'],
+  // Global CSS (Tailwind will be imported here)
+  css: ['~/assets/css/tailwind.css'],
 });

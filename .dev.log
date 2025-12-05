@@ -50,3 +50,42 @@ WARN  [Vue Router warn]: No match found for location with path "/robots.txt"
 ℹ hmr update /pages/index.vue, /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
 ℹ hmr update /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs
 ℹ hmr update /pages/index.vue?macro=true, /@id/virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Froutes.mjs (x2)
+ℹ nuxt.config.ts updated. Restarting Nuxt...
+  ➜ DevTools: press Shift + Option + D in the browser (v3.1.1)
+
+ℹ Re-optimizing dependencies because lockfile has changed
+✔ Vite client built in 12ms
+✔ Vite server built in 9ms
+[nitro] ✔ Nuxt Nitro server built in 305ms
+ℹ Vite server warmed up in 0ms
+ℹ Vite client warmed up in 0ms
+✔ Vite server hmr 2 files in 1.385ms
+
+ ERROR  Pre-transform error: Failed to resolve import "~/assets/css/tailwind.css" from "virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Fcss.mjs". Does the file exist?
+  Plugin: vite:import-analysis
+  File: virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Fcss.mjs:1:8
+  1  |  import "~/assets/css/tailwind.css";
+     |          ^
+
+
+ ERROR  Internal server error: Failed to resolve import "~/assets/css/tailwind.css" from "virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Fcss.mjs". Does the file exist?
+  Plugin: vite:import-analysis
+  File: virtual:nuxt:%2FUsers%2Fercumentbayrak%2Fproject%2Fnuxt%2FNuxt-app%2F.nuxt%2Fcss.mjs:1:8
+  1  |  import "~/assets/css/tailwind.css";
+     |          ^
+      at TransformPluginContext._formatLog (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:28992:43)
+      at TransformPluginContext.error (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:28989:14)
+      at normalizeUrl (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:27112:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:27170:32
+      at async Promise.all (index 0)
+      at async TransformPluginContext.transform (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:27138:4)
+      at async file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:17
+      at async EnvironmentPluginContainer.transform (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:28790:14)
+      at async loadAndTransform (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:22660:26)
+      at async viteTransformMiddleware (file:///Users/ercumentbayrak/project/nuxt/Nuxt-app/node_modules/vite/dist/node/chunks/config.js:24532:20)
+
+ℹ ✨ new dependencies optimized: @vue/devtools-core, @vue/devtools-kit
+ℹ page reload assets/css/tailwind.css
+✔ Vite server hmr 3 files in 0.002ms
+ℹ hmr update /assets/css/tailwind.css

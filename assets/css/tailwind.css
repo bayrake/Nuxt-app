@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: add some project defaults */
+html, body {
+  height: 100%;
+}
