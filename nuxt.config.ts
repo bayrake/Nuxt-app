@@ -9,4 +9,10 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   // Global CSS (Tailwind will be imported here)
   css: ['~/assets/css/tailwind.css'],
+  runtimeConfig: {
+    public: {
+      // Base URL for posts API: default to local server route (/api)
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api',
+    },
+  },
 });

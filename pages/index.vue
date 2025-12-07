@@ -61,15 +61,14 @@
 
 <script setup lang="ts">
 /* eslint-disable vue/multi-word-component-names */
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import { useCounterStore } from '~/stores/counter';
-import type { Post } from '~/types/post';
-import { getPosts } from '~/services/postsService';
+import { usePosts } from '~/composables/usePosts';
 
 const counter = useCounterStore();
-const posts = ref<Post[] | null>(null);
+const { posts, loading, error, load } = usePosts();
 
-onMounted(async () => {
-  posts.value = await getPosts();
+onMounted(() => {
+  load();
 });
 </script>
