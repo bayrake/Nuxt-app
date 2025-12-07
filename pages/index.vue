@@ -41,15 +41,35 @@
           <p class="text-sm text-gray-600">Pinia integrated via @pinia/nuxt for composable, type-safe stores.</p>
         </div>
       </section>
+      
+      <!-- Latest posts from service -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-semibold mb-4">Latest posts</h2>
+        <div class="grid gap-4">
+          <template v-if="posts && posts.length">
+            <div v-for="post in posts" :key="post.id" class="bg-white p-4 rounded-lg shadow">
+              <h3 class="font-semibold">{{ post.title }}</h3>
+              <p class="text-sm text-gray-600 mt-1">{{ post.body }}</p>
+            </div>
+          </template>
+          <p v-else class="text-sm text-gray-500">No posts found.</p>
+        </div>
+      </section>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
 /* eslint-disable vue/multi-word-component-names */
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useCounterStore } from '~/stores/counter';
+import type { Post } from '~/types/post';
+import { getPosts } from '~/services/postsService';
 
 const counter = useCounterStore();
-const menuOpen = ref(false);
+const posts = ref<Post[] | null>(null);
+
+onMounted(async () => {
+  posts.value = await getPosts();
+});
 </script>
