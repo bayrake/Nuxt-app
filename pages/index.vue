@@ -7,7 +7,16 @@
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div>
           <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">Build fast with Nuxt & Tailwind</h1>
-          <p class="text-lg text-gray-600 mb-6">A minimal starter wired with TypeScript, Pinia, Vitest, ESLint, Prettier and Tailwind CSS. Beautiful defaults and modern tooling so you can focus on features.</p>
+          <p class="text-lg text-gray-600 mb-4">A minimal starter wired with TypeScript, Pinia, Vitest, ESLint, Prettier and Tailwind CSS. Beautiful defaults and modern tooling so you can focus on features.</p>
+
+          <!-- Environment status -->
+          <div class="mb-4 inline-flex items-center gap-4">
+            <div class="text-sm text-gray-600">API Base:</div>
+            <div class="text-sm font-medium text-indigo-700 px-3 py-1 bg-indigo-50 rounded">{{ apiBase }}</div>
+            <div class="text-sm text-gray-600">Mode:</div>
+            <div class="text-sm font-medium text-gray-800 px-3 py-1 bg-gray-100 rounded">{{ mode }}</div>
+          </div>
+
           <div class="flex gap-3">
             <NuxtLink to="#" class="inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Get started</NuxtLink>
             <NuxtLink to="/about" class="inline-flex items-center px-5 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50">Learn more</NuxtLink>
@@ -61,12 +70,17 @@
 
 <script setup lang="ts">
 /* eslint-disable vue/multi-word-component-names */
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 import { useCounterStore } from '~/stores/counter';
 import { usePosts } from '~/composables/usePosts';
+import { useRuntimeConfig } from '#app';
 
 const counter = useCounterStore();
-const { posts, loading, error, load } = usePosts();
+const { posts, load } = usePosts();
+
+const config = useRuntimeConfig();
+const apiBase = computed(() => config.public?.apiBase ?? '/api');
+const mode = computed(() => ((import.meta as any).env?.MODE as string) ?? 'development');
 
 onMounted(() => {
   load();
