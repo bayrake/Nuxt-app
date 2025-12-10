@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
+    "dev:local": "NUXT_PUBLIC_API_BASE=/api nuxi dev",
+    "dev:remote": "NUXT_PUBLIC_API_BASE=https://jsonplaceholder.typicode.com nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
+    "start:prod": "NUXT_PUBLIC_API_BASE=https://api.example.com nuxi preview",
     "lint": "eslint --ext .js,.ts,.vue .",
     "format": "prettier --write .",
-    "test": "vitest"
+    "test": "vitest",
+    "test:ci": "NUXT_PUBLIC_API_BASE=https://jsonplaceholder.typicode.com vitest"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.11.3",
