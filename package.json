@@ -2,6 +2,9 @@
   "name": "nuxt-app",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": ">=24.12.0"
+  },
   "scripts": {
     "dev": "nuxi dev",
     "dev:local": "NUXT_PUBLIC_API_BASE=/api nuxi dev",
@@ -16,7 +19,7 @@
   },
   "dependencies": {
   "@pinia/nuxt": "^0.11.3",
-  "nuxt": "^4.2.1",
+  "nuxt": "^4.2.2",
     "pinia": "^3.0.4"
   },
   "devDependencies": {
